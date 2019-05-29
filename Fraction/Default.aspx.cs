@@ -136,10 +136,11 @@ namespace Fraction
                 error1.Visible = false;
                 error2.Visible = false;
 
-                Fractions output = new Fractions();
-
-                output.Numerator = frac1.Numerator * frac2.Numerator;
-                output.Denominator = frac1.Denominator * frac2.Denominator;
+                Fractions output = new Fractions
+                {
+                    Numerator = frac1.Numerator * frac2.Numerator,
+                    Denominator = frac1.Denominator * frac2.Denominator
+                };
 
                 output.Simp();
                 if (output.Numerator == 0)
@@ -182,10 +183,11 @@ namespace Fraction
                 error1.Visible = false;
                 error2.Visible = false;
 
-                Fractions output = new Fractions();
-
-                output.Numerator = frac1.Numerator * frac2.Denominator;
-                output.Denominator = frac1.Denominator * frac2.Numerator;
+                Fractions output = new Fractions
+                {
+                    Numerator = frac1.Numerator * frac2.Denominator,
+                    Denominator = frac1.Denominator * frac2.Numerator
+                };
 
                 output.Simp();
 
