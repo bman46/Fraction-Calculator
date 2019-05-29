@@ -50,7 +50,7 @@ namespace Fraction
 
                 if (output.Numerator == 0)
                 {
-                    Output.Text = "0";
+                    Output.Text = output.WholeNumber+"";
                 }
                 else
                 {
@@ -98,7 +98,7 @@ namespace Fraction
                 output.Simp();
                 if (output.Numerator == 0)
                 {
-                    Output.Text = "0";
+                    Output.Text = output.WholeNumber + "";
                 } else
                 {
                     Output.Text = output.WholeNumber + " " + output.Numerator + "/" + output.Denominator;
@@ -144,7 +144,7 @@ namespace Fraction
                 output.Simp();
                 if (output.Numerator == 0)
                 {
-                    Output.Text = "0";
+                    Output.Text = output.WholeNumber + "";
                 }
                 else
                 {
@@ -191,7 +191,7 @@ namespace Fraction
 
                 if (output.Numerator == 0)
                 {
-                    Output.Text = "0";
+                    Output.Text = output.WholeNumber + "";
                 }
                 else
                 {
