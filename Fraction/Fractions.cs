@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Fraction
+{
+    public class Fractions
+    {
+        public void FractionConvert(string fraction)
+        {
+            string[] split = fraction.Split(new char[] { '/' });
+
+            if (split.Length == 2)
+            {
+                double a, b;
+
+                if (double.TryParse(split[0], out a) && double.TryParse(split[1], out b))
+                {
+                    if (split.Length == 2)
+                    {
+                        Numerator = a;
+                        Denominator = b;
+
+                        return;
+                    }
+                }
+            }
+            throw new FormatException("Not a valid fraction.");
+        }
+        public static double Gcd(double a, double b)
+        {
+            if (a == 0)
+            {
+                return b;
+            }
+            return Gcd(b % a, a);
+        }
+        public void Simp()
+        { 
+            double common_factor = Gcd(Numerator, Denominator);
+
+            Denominator /= common_factor;
+            Numerator /= common_factor;
+        }
+
+        public double Numerator { get; set; }
+        public double Denominator { get; set; }
+    }
+}
