@@ -201,5 +201,51 @@ namespace Fraction
                 }
             }
         }
+
+        protected void Root_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                Fractions frac1 = new Fractions();
+                Fractions frac2 = new Fractions();
+
+                try
+                {
+                    frac1.FractionConvert(Fraction1.Text);
+                }
+                catch
+                {
+                    error1.Visible = true;
+                    error1.Text = "Not a valid fraction";
+                }
+
+                try
+                {
+                    frac2.FractionConvert(Fraction2.Text);
+                }
+                catch
+                {
+                    error2.Visible = true;
+                    error2.Text = "Not a valid fraction";
+                }
+                error1.Visible = false;
+                error2.Visible = false;
+
+                Fractions output = new Fractions();
+
+                
+
+                output.Simp();
+
+                if (output.Numerator == 0)
+                {
+                    Output.Text = output.WholeNumber + "";
+                }
+                else
+                {
+                    Output.Text = output.WholeNumber + " " + output.Numerator + "/" + output.Denominator;
+                }
+            }
+        }
     }
 }

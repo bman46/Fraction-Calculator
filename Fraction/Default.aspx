@@ -17,6 +17,8 @@
     <asp:Button ID="Subtract" class="btn btn-danger" OnClick="Subtract_Click" runat="server" Text="Subtract" />
     <asp:Button ID="Multiply" class="btn btn-primary" OnClick="Multiply_Click" runat="server" Text="Multiply" />
     <asp:Button ID="Divide" class="btn btn-warning" onClick="Divide_Click" runat="server" Text="Divide" />
+    <asp:Button ID="Root" OnClick="Root_Click" runat="server" Text="Root" class="btn btn-info" />
+
     <br />
     <h1>Output:</h1>
     <asp:Label ID="Output" runat="server"></asp:Label>
