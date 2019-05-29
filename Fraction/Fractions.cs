@@ -42,8 +42,15 @@ namespace Fraction
 
             Denominator /= common_factor;
             Numerator /= common_factor;
-        }
 
+            if (Numerator >= Denominator)
+            {
+                Numerator -= Denominator;
+                WholeNumber++;
+                Simp();
+            }
+        }
+        public double WholeNumber { get; set; }
         public double Numerator { get; set; }
         public double Denominator { get; set; }
     }

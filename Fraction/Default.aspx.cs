@@ -54,7 +54,7 @@ namespace Fraction
                 }
                 else
                 {
-                    Output.Text = output.Numerator + "/" + output.Denominator;
+                    Output.Text = output.WholeNumber + " " + output.Numerator + "/" + output.Denominator;
                 }
 
             }
@@ -101,7 +101,7 @@ namespace Fraction
                     Output.Text = "0";
                 } else
                 {
-                    Output.Text = output.Numerator + "/" + output.Denominator;
+                    Output.Text = output.WholeNumber + " " + output.Numerator + "/" + output.Denominator;
                 }
 
             }
@@ -148,7 +148,7 @@ namespace Fraction
                 }
                 else
                 {
-                    Output.Text = output.Numerator + "/" + output.Denominator;
+                    Output.Text = output.WholeNumber + " " + output.Numerator + "/" + output.Denominator;
                 }
             }
         }
@@ -195,7 +195,7 @@ namespace Fraction
                 }
                 else
                 {
-                    Output.Text = output.Numerator + "/" + output.Denominator;
+                    Output.Text =output.WholeNumber+" "+output.Numerator + "/" + output.Denominator;
                 }
             }
         }
