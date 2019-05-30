@@ -56,7 +56,7 @@ namespace Fraction
 
                 Simp();
             }
-            if(WholeNumber < 0 && Numerator < 0)
+            if (WholeNumber < 0 && Numerator < 0)
             {
                 Numerator = Math.Abs(Numerator);
             }
