@@ -34,7 +34,7 @@ namespace Fraction
             }
 
             return Gcd(b % a, a);
-        }
+        } 
         public void Simp()
         {
             double common_factor = Gcd(Numerator, Denominator);
