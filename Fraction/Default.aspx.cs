@@ -218,5 +218,10 @@ namespace Fraction
                 }
             }
         }
+
+        protected void Power_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
