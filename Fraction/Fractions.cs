@@ -32,20 +32,32 @@ namespace Fraction
             {
                 return b;
             }
+
             return Gcd(b % a, a);
         }
         public void Simp()
-        { 
+        {
             double common_factor = Gcd(Numerator, Denominator);
 
             Denominator /= common_factor;
             Numerator /= common_factor;
+            if (Numerator < 0 && Math.Abs(Numerator) >= Denominator)
+            {
+                Numerator += Denominator;
+                WholeNumber--;
 
+                Simp();
+            }
             if (Numerator >= Denominator)
             {
                 Numerator -= Denominator;
                 WholeNumber++;
+
                 Simp();
+            }
+            if(WholeNumber < 0 && Numerator < 0)
+            {
+                Numerator = Math.Abs(Numerator);
             }
         }
         public double WholeNumber { get; set; }
