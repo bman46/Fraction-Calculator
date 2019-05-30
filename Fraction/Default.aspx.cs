@@ -196,9 +196,26 @@ namespace Fraction
                 error1.Visible = false;
                 error2.Visible = false;
 
+                Fractions output = new Fractions
+                {
+                    Numerator = frac1.Numerator * frac2.Denominator,
+                    Denominator = frac1.Denominator * frac2.Numerator
+                };
 
-                Output.Text = Math.Pow(frac1.Numerator / frac1.Denominator, frac2.Numerator / frac2.Denominator)+" ";
+                output.Simp();
 
+                if (output.Numerator == 0 && output.WholeNumber != 0)
+                {
+                    Output.Text = output.WholeNumber + "";
+                }
+                else if (output.WholeNumber != 0 && output.Numerator != 0)
+                {
+                    Output.Text = output.WholeNumber + " " + output.Numerator + "/" + output.Denominator;
+                }
+                else
+                {
+                    Output.Text = output.Numerator + "/" + output.Denominator;
+                }
             }
         }
 
@@ -230,27 +247,8 @@ namespace Fraction
                 }
                 error1.Visible = false;
                 error2.Visible = false;
-            
-                Fractions output = new Fractions
-                {
-                    Numerator = frac1.Numerator * frac2.Denominator,
-                    Denominator = frac1.Denominator * frac2.Numerator
-                };
 
-                output.Simp();
-
-                if (output.Numerator == 0 && output.WholeNumber != 0)
-                {
-                    Output.Text = output.WholeNumber + "";
-                }
-                else if (output.WholeNumber != 0 && output.Numerator != 0)
-                {
-                    Output.Text = output.WholeNumber + " " + output.Numerator + "/" + output.Denominator;
-                }
-                else
-                {
-                    Output.Text = output.Numerator + "/" + output.Denominator;
-                }
+                Output.Text = Math.Pow(frac1.Numerator / frac1.Denominator, frac2.Numerator / frac2.Denominator) + " ";
             }
         }
     }
