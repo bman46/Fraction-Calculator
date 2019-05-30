@@ -26,14 +26,14 @@ namespace Fraction
             }
             throw new FormatException("Not a valid fraction.");
         }
-        public static double Gcd(double n, double d)
+        public static double Gcd(double a, double b)
         {
-            if (n == 0)
+            if (a == 0)
             {
-                return d;
+                return b;
             }
 
-            return Gcd(d % n, n);
+            return Gcd(b % a, a);
         }
         public void Simp()
         {

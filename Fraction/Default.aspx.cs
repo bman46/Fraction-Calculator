@@ -248,7 +248,7 @@ namespace Fraction
                 error1.Visible = false;
                 error2.Visible = false;
 
-                //Output.Text = Math.Pow(frac1.Numerator / frac1.Denominator, frac2.Numerator / frac2.Denominator) + "";
+                Output.Text = Math.Pow(frac1.Numerator / frac1.Denominator, frac2.Numerator / frac2.Denominator) + "";
             }
         }
     }
