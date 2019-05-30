@@ -13,7 +13,7 @@ namespace Fraction
 
             if (split.Length == 2)
             {
-                if (Double.TryParse(split[0], out double a) && Double.TryParse(split[1], out double b))
+                if (double.TryParse(split[0], out double a) && double.TryParse(split[1], out double b))
                 {
                     if (split.Length == 2)
                     {
