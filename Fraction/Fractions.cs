@@ -29,11 +29,16 @@ namespace Fraction
         }
         public static double Gcd(double a, double b)
         {
-            if (a == 0)
+            a = Math.Abs(a);
+            b = Math.Abs(b);
+
+            while (a != 0)
             {
-                return b;
+                double temp = a;
+                a = b % a;
+                b = temp;
             }
-            return Gcd(b % a, a);
+            return b;
         } 
         public void Simp()
         {
