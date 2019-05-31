@@ -33,7 +33,6 @@ namespace Fraction
             {
                 return b;
             }
-
             return Gcd(b % a, a);
         } 
         public void Simp()

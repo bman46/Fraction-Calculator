@@ -115,7 +115,6 @@ namespace Fraction
 
             }
         }
-
         protected void Multiply_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
