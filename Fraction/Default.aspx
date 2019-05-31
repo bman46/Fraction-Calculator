@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Calculator" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Fraction._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    
     <h1>Fraction 1:</h1>
     <asp:TextBox ID="Fraction1" AutoCompleteType="Disabled" class="form-control" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ForeColor="Red" ID="RequiredFieldValidator1" runat="server" ControlToValidate="Fraction1" ErrorMessage="Fraction 1 is required"></asp:RequiredFieldValidator><br />
@@ -17,8 +18,7 @@
     <asp:Button ID="Subtract" class="btn btn-danger" OnClick="Subtract_Click" runat="server" Text="Subtract" />
     <asp:Button ID="Multiply" class="btn btn-primary" OnClick="Multiply_Click" runat="server" Text="Multiply" />
     <asp:Button ID="Divide" class="btn btn-warning" onClick="Divide_Click" runat="server" Text="Divide" />
-    <asp:Button ID="Power" class="btn btn-info" OnClick="Power_Click" runat="server" Text="Power" />
-
+    <asp:Button ID="Power" class="btn btn-info" OnClick="Power_Click" runat="server" Text="Power" />    
     <br />
     <h1>Output:</h1>
     <asp:Label ID="Output" runat="server"></asp:Label>
