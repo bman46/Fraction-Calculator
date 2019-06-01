@@ -48,7 +48,7 @@ namespace Fraction
 
                 output.Simp();
 
-                if (output.Numerator == 0 && output.WholeNumber != 0)
+                if (output.Numerator == 0)
                 {
                     Output.Text = output.WholeNumber + "";
                 }
