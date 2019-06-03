@@ -60,7 +60,6 @@ namespace Fraction
                 {
                     Output.Text = output.Numerator + "/" + output.Denominator;
                 }
-
             }
         }
 
