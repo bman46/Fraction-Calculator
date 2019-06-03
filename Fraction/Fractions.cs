@@ -53,12 +53,10 @@ namespace Fraction
 
                 Simp();
             }
-            if (Numerator >= Denominator)
+            while (Numerator >= Denominator)
             {
                 Numerator -= Denominator;
                 WholeNumber++;
-
-                Simp();
             }
             if (WholeNumber < 0 && Numerator < 0)
             {
